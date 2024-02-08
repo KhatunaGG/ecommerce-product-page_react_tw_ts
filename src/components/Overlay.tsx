@@ -7,7 +7,7 @@ const Overlay = () => {
 
   const context = useContext(GlobalState)
   if (!context) return
-  const { screenWidth, dataImgArr, miniGallery, miniGaleryIndex, setMiniGaleryIndex, hideOverlay, closeOverlay } = context;
+  const { screenWidth, dataImgArr, smallImages, miniGaleryIndex, setMiniGaleryIndex, hideOverlay, closeOverlay } = context;
 
 
   return (
@@ -26,7 +26,7 @@ const Overlay = () => {
             <img
               onClick={hideOverlay}
               className='absolute -top-2 right-0 w-6 h-6 ' src="/assets/icon-close.svg" alt="" />
-            {miniGallery.map((img, i) => (
+            {smallImages.map((img, i) => (
               <img onClick={() => setMiniGaleryIndex(i)} key={i} className='w-[88px] h-[88px] rounded-[10px]' src={img} alt="" />
             ))}
           </div>

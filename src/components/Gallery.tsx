@@ -8,7 +8,7 @@ const Gallery = () => {
 
     const context = useContext(GlobalState)
     if (!context) return
-    const { screenWidth, currentImage, setCurrentImage, dataImgArr, miniGallery, showOverLay, miniGaleryIndex, setMiniGaleryIndex } = context;
+    const { screenWidth, currentImage, setCurrentImage, dataImgArr, smallImages, showOverLay, miniGaleryIndex, setMiniGaleryIndex } = context;
 
     const showNextImg = () => {
         if (currentImage === dataImgArr.length - 1) {
@@ -52,7 +52,7 @@ const Gallery = () => {
                         style={{ width: screenWidth > 375 ? '445px' : '374px', height: screenWidth > 375 ? '445px' : '300px' }}
                         className='nav-ing w-full h-[300px] md:rounded-3xl' src={dataImgArr[miniGaleryIndex]} alt="" />
                     <div className="section-slider flex flex-row gap-7 mt-6 justify-center ">
-                        {miniGallery.map((img, i) => (
+                        {smallImages.map((img, i) => (
                             <img onClick={() => setMiniGaleryIndex(i)} key={i} className='w-[88px] h-[88px] rounded-[10px]' src={img} alt="" />
                         ))}
                     </div>

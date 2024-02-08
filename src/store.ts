@@ -4,7 +4,7 @@ import { createContext } from "react";
 type GlobalContextType = {
 
     screenWidth: number;
-    setScreenWidth:  React.Dispatch<React.SetStateAction<number>>;
+    setScreenWidth: React.Dispatch<React.SetStateAction<number>>;
     openSidebar: boolean;
     setOpenSidebar: React.Dispatch<React.SetStateAction<boolean>>;
     count: number;
@@ -16,18 +16,18 @@ type GlobalContextType = {
     currentImage: number;
     handleSubmit: () => void;
     actualDiscountedPrise: number;
-    showCartUnits:  boolean;
-    miniGallery: string[];
+    showCartUnits: boolean;
     discount: number;
     currenPrice: number;
-    deleteCartItem:  () => void;
+    deleteCartItem: () => void;
     showOverLay: () => void;
     mainImageClick: boolean;
     setMiniGaleryIndex: React.Dispatch<React.SetStateAction<number>>;
     miniGaleryIndex: number;
     hideOverlay: () => void;
     closeOverlay: boolean;
-    dataImgArr : string[] | []
+    dataImgArr: string[] | []
+    smallImages: string[]
 }
 
 export const GlobalState = createContext<GlobalContextType | null>(null)

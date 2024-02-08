@@ -20,12 +20,12 @@ function App() {
   const [currenPrice] = useState<number>(data?.priceDetails.price)
   const [actualDiscountedPrise, setActualDiscountedPrise] = useState(0)
   const [showCartUnits, setShowCartUnits] = useState(false)
-  const [miniGallery, setMiniGallery] = useState<string[]>(data?.smallImages)
+  // const [miniGallery, setMiniGallery] = useState<string[]>(data?.smallImages)
   const [miniGaleryIndex, setMiniGaleryIndex] = useState(0)
   const [closeOverlay, setCloseOverLay] = useState(false)
   const [mainImageClick, setMainImageClick] = useState(false);
   const[dataImgArr, setDataImgArr] = useState<any>([])
-
+  const { smallImages } = data
 
 
   useEffect(() => {
@@ -83,7 +83,6 @@ function App() {
       handleSubmit: handleSubmit,
       actualDiscountedPrise: actualDiscountedPrise,
       showCartUnits: showCartUnits,
-      miniGallery: miniGallery,
       discount: discount,
       currenPrice: currenPrice,
       deleteCartItem: deleteCartItem,
@@ -92,7 +91,8 @@ function App() {
       setMiniGaleryIndex: setMiniGaleryIndex,
       miniGaleryIndex: miniGaleryIndex,
       hideOverlay: hideOverlay,
-      closeOverlay: closeOverlay
+      closeOverlay: closeOverlay,
+      smallImages: smallImages
 
     }}>
       <div className="App relative">
