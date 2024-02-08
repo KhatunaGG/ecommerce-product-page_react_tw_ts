@@ -13,7 +13,7 @@ const Overlay = () => {
   return (
     <>
       <div
-        style={{ display: closeOverlay ? 'none' : 'block' }}
+        style={{ display: closeOverlay ? 'none' : '' }}
 
         className='absolute w-full top-0 left-0 right-0 bottom-0  bg-slate-950 opacity-85 z-50
         flex flex-col items-center justify-center 
