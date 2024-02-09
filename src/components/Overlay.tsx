@@ -18,7 +18,7 @@ const Overlay = () => {
         className='absolute w-full top-0 left-0 right-0 bottom-0  bg-slate-950 opacity-85 z-50
         flex flex-col items-center justify-center 
       '>
-        <div className='relative'>
+        <div className='md:relative'>
           <img
             style={{ width: screenWidth > 375 ? '445px' : '374px', height: screenWidth > 375 ? '445px' : '300px' }}
             className='nav-ing w-full h-[300px] md:rounded-3xl' src={dataImgArr[miniGaleryIndex]} alt="" />
